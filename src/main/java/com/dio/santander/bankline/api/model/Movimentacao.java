@@ -1,4 +1,4 @@
-package com.dio.santader.bankline.api.model;
+package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
 
@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "tab_movimentacao")
@@ -28,8 +29,8 @@ public class Movimentacao {
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
 	
-	@Column(name = "id_Conta")
-	private Integer id_Conta; 
+	@Column(name = "id_conta")
+	private Integer idConta;
 	
 	public Integer getId() {
 		return id;
@@ -61,13 +62,11 @@ public class Movimentacao {
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
 	}
-	
-	public Integer getId_Conta() {
-		return id_Conta;
+	public Integer getIdConta() {
+		return idConta;
 	}
-	
-	public void setId_Conta(Integer id_Conta) {
-		this.id_Conta = id_Conta;
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
 	}
 	
 }
